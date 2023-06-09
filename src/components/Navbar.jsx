@@ -2,7 +2,7 @@
 const Navbar = () => {
   return (
     <>
-      <nav class="navbar navbar-fixed-top navbar-expand-lg bg-body-tertiary d-flex justify-content-between mb-5">
+      <nav class="navbar navbar-fixed-top navbar-expand-lg bg-body-tertiary d-flex justify-content-between ">
           <div>
               <img src="/public/img/Topball_logo.png" className="rounded-circle" width={50} height={50}  alt="" />
           </div>
