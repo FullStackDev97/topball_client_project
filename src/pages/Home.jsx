@@ -1,7 +1,7 @@
 const Home = () => {
   return (
     <>
-      <section className="border p-3">
+      <section className="border p-3 mt-5">
         <article className="d-flex border justify-content-between ">
           <div className="w-50">
             <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed laboriosam culpa eum dolorum sequi.
@@ -13,18 +13,18 @@ const Home = () => {
             <button className="button text-light rounded-pill px-4 py-1 bg-dark ">Check it out</button>
           </div>
           <div className="w-50">
-            <img width={350} height={350} src="/public/img/ja_dunk.jpeg" alt="" />
+            <img width={350} height={350} src="https://placehold.co/400" alt="" />
           </div>
 
         </article>
       </section>
-      <div className="vr">
-
-      </div>
-      <section className="border">
-        <article> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, culpa sit itaque aliquid earum enim voluptate, nesciunt incidunt dicta dolores debitis blanditiis eligendi placeat, laudantium ullam libero esse nisi sequi.</article>
-        <article> Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ipsam ipsa unde expedita, totam illum deleniti provident vitae, sapiente optio sint earum necessitatibus natus. Odio aspernatur quam nemo? Adipisci, modi.</article>
-        <article> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore omnis beatae necessitatibus esse est corrupti illo ratione eaque perspiciatis explicabo minima, maiores quos excepturi, asperiores vero voluptate enim aperiam iure.</article>
+      
+        <p className="text-uppercase text-left bg-dark text-light">Nouveautés</p>
+      
+      <section className="border d-flex justify-content-around col">
+        <article className="col-3">  <img src="https://placehold.co/200" alt="" srcset="" /> <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p></article>
+        <article className="col-3"><img src="https://placehold.co/200" alt="" srcset="" /> <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p> </article>
+        <article className="col-3"> <img src="https://placehold.co/200" alt="" srcset="" /> <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>  </article>
       </section>
     </>
   )

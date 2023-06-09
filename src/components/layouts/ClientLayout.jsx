@@ -15,7 +15,7 @@ const ClientLayout = () => {
         
       </main>
 
-      <footer>
+      <footer className='bg-secondary'>
         <Footer />
       </footer>
     </div>
