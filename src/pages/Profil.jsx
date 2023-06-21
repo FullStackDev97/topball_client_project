@@ -1,10 +1,17 @@
+import { useState, createContext, useContext } from "react";
+import { AuthContext } from "../context/AuthContext";
+import { Link } from "react-router-dom";
+
 const Profil = () => {
+  const auth = useContext(AuthContext);
+  const user = auth.authUser;
   return (
     <>
+
       <div className="d-flex">
 
-
         <div className="d-flex flex-column flex-shrink-0  bg-light" style={{ width: "8rem" }}>
+
           <a href="/" className="d-block p-3 link-dark text-decoration-none" title="Icon-only" data-bs-toggle="tooltip" data-bs-placement="right">
             <img src="https://placehold.co/80" className="rounded-circle" alt="" />
             <span className="text-dark">Home</span>
@@ -52,9 +59,13 @@ const Profil = () => {
         </div>
 
         <section className="col mt-3">
+          <h1 className="text-center mb-3">welcome {user.user_name}</h1>
           <div className=" offset-2 card p-0 w-70 col-8">
             <div className="w-100 bg-dark">
-              <h3 className="card-title text-uppercase  text-light ">Equipe active</h3>
+              <Link to={'/teams'}>
+                <h3 className="card-title text-uppercase  text-light ">Equipe active</h3>
+              </Link>
+
             </div>
 
             <div className="card-body p-5">
@@ -65,6 +76,7 @@ const Profil = () => {
           <br />
 
           <div className="d-flex  col">
+
             <div className="card p-0 offset-2 col-3">
               <div className="w-100 bg-dark">
                 <h3 className="card-title text-uppercase  text-light ">Gestion des equipes</h3>
