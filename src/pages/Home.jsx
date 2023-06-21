@@ -22,9 +22,9 @@ const Home = () => {
         <p className="text-uppercase text-left bg-dark text-light">Nouveautés</p>
       
       <section className="border d-flex justify-content-around col">
-        <article className="col-3">  <img src="https://placehold.co/200" alt="" srcset="" /> <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p></article>
-        <article className="col-3"><img src="https://placehold.co/200" alt="" srcset="" /> <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p> </article>
-        <article className="col-3"> <img src="https://placehold.co/200" alt="" srcset="" /> <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>  </article>
+        <article className="col-3">  <img src="https://placehold.co/200" alt=""  /> <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p></article>
+        <article className="col-3"><img src="https://placehold.co/200" alt=""  /> <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p> </article>
+        <article className="col-3"> <img src="https://placehold.co/200" alt=""  /> <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>  </article>
       </section>
     </>
   )
