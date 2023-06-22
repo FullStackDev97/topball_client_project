@@ -40,6 +40,7 @@ export const AuthProvider = props => {
   }
 
   const signup = async (key, userData) => {
+    const { token } = userData;
     const { logged, role, user_id, email,user_name,profil_pic  } = userData;
     saveUserToLocalStorage({user_id, email, token,user_name, role, logged,profil_pic})
     setIsLoggedIn(true)
