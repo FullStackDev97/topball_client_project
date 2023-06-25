@@ -3,13 +3,13 @@ import Footer from '../Footer';
 import Navbar from '../Navbar';
 import {Outlet} from 'react-router-dom';
 
-const ClientLayout = () => {
+const MainLayout = () => {
   return (
     <div>
       <header>
         <Navbar />
       </header>
-      <main>
+      <main >
         
         <Outlet />
         
@@ -22,4 +22,4 @@ const ClientLayout = () => {
   )
 }
 
-export default ClientLayout
+export default MainLayout

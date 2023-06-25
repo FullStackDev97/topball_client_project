@@ -10,48 +10,48 @@ const Profil = () => {
 
       <div className="d-flex">
 
-        <div className="d-flex flex-column flex-shrink-0  bg-light" style={{ width: "8rem" }}>
+        <div className="d-flex flex-column flex-shrink-0  bg-dark" style={{ width: "8rem" }}>
 
-          <a href="/" className="d-block p-3 link-dark text-decoration-none" title="Icon-only" data-bs-toggle="tooltip" data-bs-placement="right">
+          <a href="/" className="d-block p-3 link-light mt-1 bg-dark text-decoration-none" title="Icon-only" data-bs-toggle="tooltip" data-bs-placement="right">
             <img src="https://placehold.co/80" className="rounded-circle" alt="" />
-            <span className="text-dark">Home</span>
+            <span className="text-light">Home</span>
           </a>
           <ul className="nav nav-pills nav-flush flex-column mb-auto text-center">
             <li className="nav-item">
-              <a href="/" className="d-block p-3 link-dark text-decoration-none" title="Icon-only" data-bs-toggle="tooltip" data-bs-placement="right">
+              <a href="/teams" className="d-block p-3 link-dark text-decoration-none" title="Icon-only" data-bs-toggle="tooltip" data-bs-placement="right">
                 <img src="https://placehold.co/80" className="rounded-circle" alt="" />
-                <span className="text-dark">Teams</span>
+                <span className="text-light">Teams</span>
               </a>
             </li>
             <li>
               <a href="/" className="d-block p-3 link-dark text-decoration-none" title="Icon-only" data-bs-toggle="tooltip" data-bs-placement="right">
                 <img src="https://placehold.co/80" className="rounded-circle" alt="" />
-                <span className="text-dark">Auction</span>
+                <span className="text-light">Auction</span>
               </a>
             </li>
             <li>
               <a href="/" className="d-block p-3 link-dark text-decoration-none" title="Icon-only" data-bs-toggle="tooltip" data-bs-placement="right">
                 <img src="https://placehold.co/80" className="rounded-circle" alt="" />
-                <span className="text-dark">Play</span>
+                <span className="text-light">Play</span>
               </a>
             </li>
             <li>
               <a href="/" className="d-block p-3 link-dark text-decoration-none" title="Icon-only" data-bs-toggle="tooltip" data-bs-placement="right">
                 <img src="https://placehold.co/80" className="rounded-circle" alt="" />
-                <span className="text-dark">Transactions</span>
+                <span className="text-light">Transactions</span>
               </a>
             </li>
             <li>
               <a href="/" className="d-block p-3 link-dark text-decoration-none" title="Icon-only" data-bs-toggle="tooltip" data-bs-placement="right">
                 <img src="https://placehold.co/80" className="rounded-circle" alt="" />
-                <span className="text-dark">Stats</span>
+                <span className="text-light">Stats</span>
               </a>
             </li>
 
             <li>
               <a href="/" className="d-block p-3 link-dark text-decoration-none" title="Icon-only" data-bs-toggle="tooltip" data-bs-placement="right">
                 <img src="https://placehold.co/80" className="rounded-circle" alt="" />
-                <span className="text-dark">Settings</span>
+                <span className="text-light">Settings</span>
               </a>
             </li>
           </ul>
@@ -59,15 +59,16 @@ const Profil = () => {
         </div>
 
         <section className="col mt-3">
-          <h1 className="text-center mb-3">welcome {user.user_name}</h1>
-          <div className=" offset-2 card p-0 w-70 col-8">
-            <div className="w-100 bg-dark">
-              <Link to={'/teams'}>
-                <h3 className="card-title text-uppercase  text-light ">Equipe active</h3>
-              </Link>
+          <h1 className="text-center fs-2 fw-bold text-light my-5">welcome {user.user_name}</h1>
+          <div className=" offset-2 bg-light shadow-lg  p-0 w-70 col-8">
+            <Link className="text-decoration-none" to={'/teams'}>
+              <div className="w-100 bg-dark p-3">
 
-            </div>
+                <h3 className="card-title text-uppercase  text-light ">Manage Teams</h3>
 
+
+              </div>
+            </Link>
             <div className="card-body p-5">
               <img src="https://placehold.co/200" className="rounded-circle" alt="" />
             </div>
@@ -75,11 +76,13 @@ const Profil = () => {
 
           <br />
 
-          <div className="d-flex  col">
+          <div className="d-flex col">
 
-            <div className="card p-0 offset-2 col-3">
-              <div className="w-100 bg-dark">
-                <h3 className="card-title text-uppercase  text-light ">Gestion des equipes</h3>
+            <div className="bg-light p-0 offset-2 col-3">
+              <div className="w-100 bg-dark p-3">
+
+                <h3 className="card-title text-uppercase  text-light ">Players</h3>
+
               </div>
 
               <div className="card-body p-5">
@@ -87,9 +90,9 @@ const Profil = () => {
               </div>
             </div>
 
-            <div className="card p-0 offset-2 col-3">
-              <div className="w-100 bg-dark">
-                <h3 className="card-title text-uppercase  text-light ">Equipe de la semaine</h3>
+            <div className="bg-light p-0 offset-2 col-3">
+              <div className="w-100 bg-dark p-3">
+                <h3 className="card-title text-uppercase  text-light ">Market</h3>
               </div>
 
               <div className="card-body p-5">
