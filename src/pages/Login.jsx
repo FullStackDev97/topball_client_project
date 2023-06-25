@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useAuth } from '../context/AuthContext';
 import api from '../api/api';
 import { Formik, Form, Field } from 'formik';
+import { Link } from "react-router-dom";
+import '../MyOwn.css'
 import * as Yup from 'yup';
 
 const Login = () => {
@@ -14,7 +16,7 @@ const Login = () => {
     });
 
     const handlerSubmit = async (e) => {
-        e.preventDefault();
+        //e.preventDefault();
 
         if (password !== '' && email !== '') {
             try {
@@ -45,29 +47,35 @@ const Login = () => {
 
     return (
         <>
-            <Formik initialValues={{email: '', password:''}}  onSubmit={(e) => handlerSubmit(e)}validationSchema={loginSchema}  
-             >
-            {({ errors, touched }) => (
-                <Form onChange={(e) => handlerChange(e)} method="post" action="http://localhost:8000/user/login">
-                    <label htmlFor="email" className="form-label">email</label>
-                    <Field type="email" className="form-control" name="email" id="email" />
-                    {errors.email && touched.email ? (
-                        <div className="text-danger">{errors.email}</div>
-                    ) : null}
 
-                    <label htmlFor="password" className="form-label">password</label>
-                    <Field type="password" className="form-control" name="password" id="password" />
-                    {errors.password && touched.password ? (
-                        <div className="text-danger">{errors.password}</div>
-                    ) : null}
+            <p className="text-center">Login</p>
+            <Formik className='mt-5' initialValues={{ email: '', password: '' }} onSubmit={(e) => handlerSubmit(e)} validationSchema={loginSchema}
+            >
+                {({ errors, touched }) => (
+                    <Form onChange={(e) => handlerChange(e)} method="post" action="http://localhost:8000/user/login">
+                        <label htmlFor="email" className="form-label">email</label>
+                        <Field type="email" className="form-control rounded-pill mb-3" name="email" id="email" />
+                        {errors.email && touched.email ? (
+                            <div className="text-danger">{errors.email}</div>
+                        ) : null}
 
-                    <div className="d-flex mt-3 justify-content-center">
-                        <input type="submit" className="btn btn-primary" value="Sign in" />
-                    </div>
+                        <label htmlFor="password" className="form-label">password</label>
+                        <Field type="password" className="form-control rounded-pill" name="password" id="password" />
+                        {errors.password && touched.password ? (
+                            <div className="text-danger">{errors.password}</div>
+                        ) : null}
 
-                </Form>
-                 )}
+                        <div className="d-flex my-4 justify-content-center">
+                            <input type="submit" className="fs-5 btn-red-obscur rounded-pill" value="Sign in" />
+                        </div>
+
+                    </Form>
+                )}
             </Formik>
+            <div className="d-flex justify-content-center">
+                <Link className="text-center my-3">mot de passe oublié ?</Link>
+            </div>
+
 
         </>
     )

@@ -112,7 +112,7 @@ const SignUp = () => {
                     ) : null}
 
                     <div className="d-flex mt-3 justify-content-center">
-                        <input type="submit" className="btn btn-primary" value="Sign up" />
+                        <input type="submit" className="fs-5 btn-red-obscur rounded-pill" value="Sign up" />
                     </div>
 
                 </Form>

@@ -1,30 +1,33 @@
 const Home = () => {
   return (
     <>
-      <section className="border p-3 mt-5">
-        <article className="d-flex border justify-content-between ">
+      <section className=" p-3 mt-5 col">
+        <article className="d-sm-flex  justify-content-between ">
           <div className="w-50">
-            <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed laboriosam culpa eum dolorum sequi.
+            <h2 className="fs-1 fw-bold my-2 text-light">AS TU LE QI BASKET POUR
+              DEVENIR LE MEILLEUR
             </h2>
             <br />
-            <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed laboriosam culpa eum dolorum sequi.
+            <h2 className="s-1 fw-bold my-2 text-light">POUR DEVENIR LE MEILLEUR TU
+              DOIS VAINCRE LES MEILLEURS
             </h2>
             <br />
-            <button className="button text-light rounded-pill px-4 py-1 bg-dark ">Check it out</button>
+            <p className="fs-4 text-light">EST TU PRET ?</p>
+            <button className=" btn-outline-bright text-light rounded-pill fs-5 px-4 py-3 bg-transparent ">Check it out</button>
           </div>
-          <div className="w-50">
-            <img width={350} height={350} src="https://placehold.co/400" alt="" />
+          <div className="col-5">
+            <img className="col-8 my-2" src="src/assets/giannis.jpg" alt="" />
           </div>
 
         </article>
       </section>
-      
-        <p className="text-uppercase text-left bg-dark text-light">Nouveautés</p>
-      
-      <section className="border d-flex justify-content-around col">
-        <article className="col-3">  <img src="https://placehold.co/200" alt=""  /> <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p></article>
-        <article className="col-3"><img src="https://placehold.co/200" alt=""  /> <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p> </article>
-        <article className="col-3"> <img src="https://placehold.co/200" alt=""  /> <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>  </article>
+
+      <p className="text-uppercase p-3 text-start fs-3 bg-dark text-light">The Latests</p>
+
+      <section className=" d-flex justify-content-around mb-3 py-2 col">
+        <article className="col-3">  <img className=" my-2 " src="https://placehold.co/200" alt="" /> <p className="text-light fw-bolder fs-5">League news</p></article>
+        <article className="col-3"><img className=" my-2 " src="https://placehold.co/200" alt="" /> <p className="text-light fw-bolder fs-5">Player developpment</p> </article>
+        <article className="col-3"> <img className=" my-2 " src="https://placehold.co/200" alt="" /> <p className="text-light fw-bolder fs-5">Articles </p>  </article>
       </section>
     </>
   )
